@@ -1,0 +1,121 @@
+* {
+  margin: 0px;
+  border: 2px;
+  padding: 20px;
+  content: 56px;
+  box-sizing: 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+  --color-background: #fbe5fb;
+  --color-background-alt: #749da1;
+  --color-text: #000000;
+  --color-text-alt: #ffffff;
+  --color-button: #f28482;
+  --color-button-hover: #e96d6b;
+  --color-button-active: #e75c59;
+  --h2:
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  background-color: rgb(251, 229, 251);
+  color: black
+}
+
+#header {
+  background-color: var(--color-background-alt);
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header h1 {
+  margin-left: 20px;
+}
+
+#header nav {
+  margin-right: 20px;
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#header li {
+  margin-left: 15px;
+}
+
+#header a {
+  text-decoration: none;
+  color: var(--color-text-alt);
+}
+
+#sobre-mi {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#proyectos {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#blog {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#referencias {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#contacto {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+.button {
+  padding: 10px 20px;
+  color: var(--color-text);
+  background-color: #f28482;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform (0.3s) ease-in-out;
+}
+
+.button:hover {
+  background-color: #e96d6b;
+}
+
+.button:active {
+  background-color: #e75c59;
+  transform: scale(0.9);
+}
+
+#redes-sociales {
+  background-color: rgb(116, 157, 161);
+  width: 100;
+  display: flex;
+  justify-content: space-around;
+  a{
+    text-decoration:none;
+    color: var(--color-text-alt)
+  }
+}
