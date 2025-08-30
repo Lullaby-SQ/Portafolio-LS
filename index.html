@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +12,31 @@
 </head>
 
 <body>
-  <div>
-    <header id="header">
-      <h1>Portafolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#sobre-mi">Sobre Mi</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#referencias">Referencias</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+  <header id="header">
+    <h1>Portafolio</h1>
+    <nav class="navbar">
+      <span class="logo">Mi Sitio</span>
+      <div class="Menu" id="Menu"></div>
+      <a href="#">Inicio</a>
+      <a href="#sobre-mi">Sobre Mi</a>
+      <a href="#sobre-mi">Sobre Mi</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#blog">Blog</a>
+      <a href="#referencias">Referencias</a>
+      <a href="#contacto">Contacto</a>
+      </div>
+      <div class="hamburger" id="hamburger" aria-lablel="Abrir menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
   <main>
     <section class="section-container">
       <h2 id="sobre-mi">Sobre Mi</h2>
       <div>
-        <img src="" alt="Foto de Perfil">
+        <img src="Yo.jpg" alt="Foto de Perfil, Puppycat en sufrimiento">
         <h3>Lucía Silva Queirolo</h3>
         <p><i>Estudiante de Programación y Desarrollo Web</i></p>
       </div>
@@ -83,23 +90,29 @@
 
     <section class="section-container">
       <h2 id="contacto">Contacto</h2>
-      <form action="">
+      <form action="" id="formulario">
         <label for="">Nombre</label>
-        <input type="text" name="" id="" placeholder="Ingrese su Nombre">
+        <input type="text" name="" id="Nombre" placeholder="Ingrese su Nombre">
+        <label for="">Email</label>
+        <input type="text" name="" id="Email" placeholder="Ingrese su Email">
         <label for="">Mensaje</label>
-        <input type="text" name="" id="" placeholder="Ingrese su Mensaje">
+        <input type="text" name="" id="Mensaje" placeholder="Ingrese su Mensaje">
         <button class="button">Enviar</button>
-        <div id="redes-sociales">
-          <ul>
-            <a href="">GitHub</a>
-            <a href="">Gmail</a>
-            <a href="">Instagram</a>
-            <a href="">Linkedin</a>
-          </ul>
-        </div>
       </form>
     </section>
+
+    <footer>
+      <div id="redes-sociales">
+        <ul>
+          <a href="">GitHub</a>
+          <a href="">Gmail</a>
+          <a href="">Instagram</a>
+          <a href="">Linkedin</a>
+        </ul>
+      </div>
+    </footer>
   </main>
-  <script src=""
+  <script src="script.js"></script>
 </body>
+
 </html>

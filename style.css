@@ -22,7 +22,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.6;
   background-color: rgb(251, 229, 251);
-  color: black
+  color: black;
 }
 
 #header {
@@ -30,6 +30,7 @@ body {
   color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -37,6 +38,8 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+#Menu {}
 
 #header h1 {
   margin-left: 20px;
@@ -50,6 +53,10 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
+}
+
+.section-container {
+  margin-top: 20px;
 }
 
 #header li {
@@ -114,8 +121,15 @@ body {
   width: 100;
   display: flex;
   justify-content: space-around;
-  a{
-    text-decoration:none;
+
+  a {
+    text-decoration: none;
     color: var(--color-text-alt)
+  }
+}
+
+@media (max-width: 700px) {
+  .button:hover {
+    background-color: #6b10d3;
   }
 }
