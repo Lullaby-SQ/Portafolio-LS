@@ -15,14 +15,6 @@
   --color-button: #f28482;
   --color-button-hover: #e96d6b;
   --color-button-active: #e75c59;
-  --h2:
-}
-
-body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  line-height: 1.6;
-  background-color: rgb(251, 229, 251);
-  color: black;
 }
 
 #header {
@@ -90,7 +82,7 @@ body {
   width: 100%
 }
 
-#contacto {
+#formulario {
   background-color: rgb(116, 157, 161);
   color: rgb(255, 255, 255);
   width: 100%
@@ -126,8 +118,103 @@ body {
   }
 }
 
-@media (max-width: 700px) {
-  .button:hover {
-    background-color: #6b10d3;
+/* Navbar y menu de hamburguesa */
+.navbar {
+  width: 100%;
+  background: var(--color-background-alt);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navbar .menu a:hover {
+  color: #f28482;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .navbar .menu {
+    gap: 12px;
   }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: row;
+    padding: 10px 16px;
+  }
+
+  .navbar .menu {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: rgb(116, 157, 161);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+  }
+
+  .navbar .menu.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+body {
+  padding-top: 70px;
+}
+
+body {
+  background: #f4f4f4;
+  font-family: 'Times New Roman'
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  background-color: rgb(251, 229, 251);
+  color: black;
 }
