@@ -1,0 +1,289 @@
+* {
+  margin: 0px;
+  border: 2px;
+  padding: 20px;
+  content: 56px;
+  box-sizing: 100px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+  --color-background: #fbe5fb;
+  --color-background-alt: #749da1;
+  --color-text: #000000;
+  --color-text-alt: #ffffff;
+  --color-button: #f28482;
+  --color-button-hover: #e96d6b;
+  --color-button-active: #e75c59;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+#header {
+  background-color: var(--color-background-alt);
+  color: var(--color-text-alt);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header h1 {
+  margin-left: 20px;
+}
+
+#header nav {
+  margin-right: 20px;
+}
+
+#header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.section-container {
+  margin-top: 20px;
+}
+
+#header li {
+  margin-left: 15px;
+}
+
+#header a {
+  text-decoration: none;
+  color: var(--color-text-alt);
+}
+
+#sobre-mi {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#proyectos {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#blog {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#referencias {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+#formulario {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
+  width: 100%
+}
+
+.button {
+  padding: 10px 20px;
+  color: var(--color-text);
+  background-color: #f28482;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform (0.3s) ease-in-out;
+}
+
+.button:hover {
+  background-color: #e96d6b;
+}
+
+.button:active {
+  background-color: #e75c59;
+  transform: scale(0.9);
+}
+
+#redes-sociales {
+  background-color: rgb(116, 157, 161);
+  width: 100;
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: var(--color-text-alt)
+  }
+}
+
+/*Skill bar */
+.container {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #fff;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #db3a34;
+}
+
+.bar {
+  width: 90%;
+  height: 35px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  transition: all 2s linear;
+}
+
+.bar-1,
+.my-skills {
+  width: 80%;
+  margin: 10px auto 25px;
+}
+
+.bar-inner {
+  width: 0;
+  height: 35px;
+  line-height: 35px;
+  background: #db3a34;
+  border-radius: 5px 0 0 5px;
+}
+
+.bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 18px;
+}
+
+/* Navbar y menu de hamburguesa */
+.navbar {
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 12px 24px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navbar .menu a:hover {
+  color: #f28482;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .navbar .menu {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: row;
+    padding: 10px 16px;
+  }
+
+  .navbar .menu {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: rgb(116, 157, 161);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+  }
+
+  .navbar .menu.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.container {
+  background: #fff;
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f28482;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

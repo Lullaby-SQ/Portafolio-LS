@@ -7,7 +7,7 @@
   <meta name="keywords" content="Portafolio, Desarrollador Web, CSS, JavaScript, HTML">
   <meta name="author" content="Lucía Silva Queirolo">
   <title>Portafolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
@@ -20,7 +20,6 @@
       <a href="#proyectos">Proyectos</a>
       <a href="#blog">Blog</a>
       <a href="#referencias">Referencias</a>
-      <a href="#formulario">Formulario</a>
       <a href="#contacto">Contacto</a>
       </div>
       <div class="hamburger" id="hamburger" aria-lablel="Abrir menu" tabindex="0">
@@ -34,7 +33,7 @@
     <section class="section-container">
       <h2 id="sobre-mi">Sobre Mi</h2>
       <div>
-        <img src="Yo.jpg" alt="Foto de Perfil, Puppycat en sufrimiento">
+        <img src="assets/imagenes/Yo.jpg" alt="Foto de Perfil, Puppycat en sufrimiento">
         <h3>Lucía Silva Queirolo</h3>
         <p><i>Estudiante de Programación y Desarrollo Web</i></p>
       </div>
@@ -46,24 +45,58 @@
           consequuntur.
         </p>
       </div>
-      <div>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Python</li>
-        </ul>
+      <div class="container">
+        <h2 class="my-skills">Habilidades</h2>
+        <p>
+          Estos son los programas que sé utilizar, pronto la lista será más larga ૮ • ﻌ - ა
+        </p>
+        <div class="bar-1">
+          <div class="title">HTML5</div>
+          <div class="bar" data-width="65%">
+            <div class="bar-inner"></div>
+            <div class="bar-percent">65%</div>
+          </div>
+        </div>
+        <div class="bar-1">
+          <div class="title" style="color: #084c61;">CSS3</div>
+          <div class="bar" data-width="85%">
+            <div class="bar-inner" style="background: #084c61;"></div>
+            <div class="bar-percent">85%</div>
+          </div>
+        </div>
+        <div class="bar-1">
+          <div class="title" style="color: #525252;">JavaScript</div>
+          <div class="bar" data-width="95%">
+            <div class="bar-inner" style="background: #525252;">
+            </div>
+            <div class="bar-percent">95%</div>
+          </div>
+        </div>
+        <div class="bar-1">
+          <div class="title" style="color: #5a68a5">Git</div>
+          <div class="bar" data-width="75%">
+            <div class="bar-inner" style="background: #5a68a5;"></div>
+            <div class="bar-percent">60%</div>
+          </div>
+        </div>
+        <div class="bar-1">
+          <div class="title" style="color: #c35ccd">NodeJS</div>
+          <div class="bar" data-width="0.1%">
+            <div class="bar-inner" style="background: #c35ccd;"></div>
+            <div class="bar-percent">0.1%</div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section-container">
       <h2 id="proyectos">Proyectos</h2>
       <div>
-        <img src="" alt="Imagen del Proyecto">
+        <img src="assets/imagenes/folder.png" alt="Imagen del Proyecto">
         <div>
           <h4>Mi Portafolio</h4>
           <p>Proyecto desarrollado en HTML, CSS y JavaScript</p>
-          <a href="">[Link del Proyecto]</a>
+          <a href="https://github.com/Lullaby-SQ/Portafolio-LS.git">Portafolio en GitHub</a>
         </div>
       </div>
     </section>
@@ -112,7 +145,7 @@
       </div>
     </footer>
   </main>
-  <script src="script.js"></script>
+  <script src="assets/script.js"></script>
 </body>
 
 </html>
