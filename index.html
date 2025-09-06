@@ -11,28 +11,27 @@
 </head>
 
 <body>
-  <header id="header">
-    <h1>Portafolio</h1>
-    <nav class="navbar">
-      <div class="Menu" id="Menu"></div>
-      <a href="#">Inicio</a>
-      <a href="#sobre-mi">Sobre Mi</a>
-      <a href="#Habilidades">Habilidades</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#contacto">Contacto</a>
-      </div>
-      <div class="hamburger" id="hamburger" aria-lablel="Abrir menu" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
+  <header">
+    <nav>
+      <div id="header">
+        <h1 class="logo">Portafolio</h1>
+        <button id="desplegar" class="menu-desplegable">☰</button>
+        <ul class="navegacion" id="navegacion">
+          <li><a class="button" href="#inicio">Inicio</a></li>
+          <li><a class="button" href="#sobre-mi">Sobre Mi</a></li>
+          <li><a class="button" href="#habilidades">Habilidades</a></li>
+          <li><a class="button" href="#proyectos">Proyectos</a></li>
+          <li><a class="button" href="#footer">Contacto</a></li>
+          </ul>
+        <button class="cerrar" id="cerrar">✖</button>
       </div>
     </nav>
   </header>
+
   <main>
     <section class="section-container">
       <h2 id="sobre-mi">Sobre Mi</h2>
       <div>
-        <!--Intentar poner imagen a la derecha y texto redondeandola-->
         <img src="assets/imagenes/Yo.jpg" alt="Foto de Perfil, Puppycat en sufrimiento">
         <h3>Lucía Silva Queirolo</h3>
         <p><i>Estudiante de Programación y Desarrollo Web</i></p>
@@ -45,9 +44,9 @@
           consequuntur.
         </p>
       </div>
-      <!--Poner Skill bar-->
+
       <section class="section-container">
-        <h2 id="Habilidades">Habilidades</h2>
+        <h2 id="habilidades">Habilidades</h2>
         <div class="container">
           <p>
             Estos son los programas que sé utilizar, pronto la lista será más larga ૮ • ﻌ - ა
@@ -122,30 +121,27 @@
         </div>
       </section>
 
-
       <section class="section-container">
-        <div class="container">
-          <h2 id="formulario">Formulario de Usuario</h2>
-          <form action="" id="formulario">
+        <h2 id="formulario">Contacto</h2>
+        <div class="container" id="formulario-box">
+          <p>Para poder contactarme, por favor ingrese sus datos en el siguiente formulario:</p>
+          <form action="">
             <label for="Nombre">Nombre: </label>
             <input type="text" name="Nombre" id="Nombre" placeholder="Ingrese su Nombre" required>
             <label for="Email">Email: </label>
             <input type="text" name="Email" id="Email" placeholder="Ingrese su Email" required>
             <label for="Mensaje">Mensaje: </label>
             <input type="text" name="Mensaje" id="Mensaje" placeholder="Ingrese su Mensaje" required>
-            <button class="button">Enviar</button>
+            <button type="submit">Enviar</button>
           </form>
         </div>
       </section>
 
       <footer>
-        <div id="redes-sociales">
-          <ul>
-            <a href="">GitHub</a>
-            <a href="">Gmail</a>
-            <a href="">Instagram</a>
-            <a href="">Linkedin</a>
-          </ul>
+        <div id="footer">
+          <a href="https://github.com/Lullaby-SQ">GitHub</a>
+          <a href="mailto:silvaqueirololucia@gmail.com">Gmail</a>
+          <a href="https://www.linkedin.com/">Linkedin</a>
         </div>
       </footer>
   </main>

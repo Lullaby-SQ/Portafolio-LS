@@ -1,7 +1,6 @@
 * {
+  padding: 0px;
   margin: 0px;
-  border: 2px;
-  padding: 20px;
   content: 56px;
   box-sizing: border-box;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -17,7 +16,12 @@
   --color-button-active: #e75c59;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  padding-top: 80px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.6;
   background-color: var(--color-background);
@@ -33,11 +37,12 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0px;
+  padding: 20px;
   margin: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 #header h1 {
@@ -58,6 +63,10 @@ body {
   margin-top: 20px;
 }
 
+.section-container h2 {
+  margin-bottom: 20px;
+}
+
 #header li {
   margin-left: 15px;
 }
@@ -70,19 +79,37 @@ body {
 #sobre-mi {
   background-color: rgb(116, 157, 161);
   color: rgb(255, 255, 255);
-  width: 100%
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* centra horizontal */
+  align-items: center;
+  /* centra vertical */
+  min-height: 80px;
+  /* altura mínima ajustable */
+  text-align: center;
 }
 
-#Habilidades {
+#habilidades {
   background-color: rgb(116, 157, 161);
   color: rgb(255, 255, 255);
-  width: 100%
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  text-align: center;
 }
 
 #proyectos {
   background-color: rgb(116, 157, 161);
   color: rgb(255, 255, 255);
-  width: 100%
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  text-align: center;
 }
 
 /*Cards intercativas*/
@@ -164,37 +191,35 @@ a {
 #formulario {
   background-color: rgb(116, 157, 161);
   color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+  text-align: center;
+}
+
+#formulario-box {
+  background-color: rgb(116, 157, 161);
+  color: rgb(255, 255, 255);
   width: 100%
 }
 
-.button {
-  padding: 10px 20px;
-  color: var(--color-text);
-  background-color: #f28482;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform (0.3s) ease-in-out;
-}
-
-.button:hover {
-  background-color: #e96d6b;
-}
-
-.button:active {
-  background-color: #e75c59;
-  transform: scale(0.9);
-}
-
-#redes-sociales {
+#footer {
   background-color: rgb(116, 157, 161);
-  width: 100;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
+  min-height: 80px;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0px;
+}
 
-  a {
-    text-decoration: none;
-    color: var(--color-text-alt)
-  }
+#footer a {
+  text-decoration: none;
+  color: var(--color-text-alt)
 }
 
 /*Skill bar */
@@ -282,84 +307,6 @@ a {
 }
 
 /* Navbar y menu de hamburguesa */
-.navbar {
-  width: 100%;
-  background: var(--color-background-alt);
-  color: var(--color-text);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 12px 24px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.navbar .menu {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar .menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-.navbar .menu a:hover {
-  color: #f28482;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-  display: block;
-}
-
-@media (max-width: 900px) {
-  .navbar .menu {
-    gap: 12px;
-  }
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: row;
-    padding: 10px 16px;
-  }
-
-  .navbar .menu {
-    position: absolute;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    background: rgb(116, 157, 161);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    display: none;
-  }
-
-  .navbar .menu.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
 .container {
   background: #fff;
   max-width: 400px;
@@ -369,9 +316,28 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  text-align: center;
-  color: #333;
+.navegacion {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.navegacion li a{
+  color: var(--color-text-alt);
+  text-decoration: none;
+}
+
+.cerrar {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--color-text-alt);
+  cursor: pointer;
+}
+
+.menu-desplegable {
+  display: none;
 }
 
 form {
@@ -394,7 +360,7 @@ input {
 button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #f28482;
+  background-color: var(--color-button);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -405,4 +371,66 @@ button {
 
 button:hover {
   background: var(--color-button-hover)
+}
+
+button:active {
+  background-color: #e75c59;
+  transform: scale(0.9);
+}
+
+@media (max-width: 900px) {
+  .navegacion {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navegacion {
+    display: none;
+    position: absolute;
+    top:60px;
+    right: 0;
+    width: 30%;
+    background: var(--color-background-alt);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 0 0 0 10px;
+  }
+
+  .navegacion.visible {
+    display: flex;
+  }
+
+  #cerrar {
+    font-size: 15px;
+    margin-top: 20px;
+    border: none;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(2, 15, 131, 0.938);
+    transition: 1s;
+  }
+
+  .cerrar.visible {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right:15px;
+  }
+
+  #cerrar:hover {
+    scale: 1.01;
+    transition: 1s;
+  }
+
+  .menu-desplegable {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--color-text-alt);
+    background: none;
+    border: none;
+  }
 }
