@@ -316,28 +316,55 @@ a {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navegacion {
+.navbar {
+  width: 100%;
+  background: var(--color-background-alt);
+  color: var(--color-text-alt);
   display: flex;
-  list-style-type: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar .menu {
+  display: flex;
   gap: 20px;
 }
 
-.navegacion li a{
+.navbar .menu a {
   color: var(--color-text-alt);
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.cerrar {
+.navbar .menu a:hover {
+  color: var(--color-button-hover);
+}
+
+.hamburger {
   display: none;
-  background: none;
-  border: none;
-  font-size: 22px;
-  color: var(--color-text-alt);
+  flex-direction: column;
   cursor: pointer;
+  gap: 4px;
 }
 
-.menu-desplegable {
-  display: none;
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--color-button);
+  border-radius: 2px;
+  display: block;
 }
 
 form {
@@ -379,58 +406,34 @@ button:active {
 }
 
 @media (max-width: 900px) {
-  .navegacion {
+  .navbar .menu {
     gap: 12px;
   }
 }
 
 @media (max-width: 700px) {
-  .navegacion {
-    display: none;
-    position: absolute;
-    top:60px;
-    right: 0;
-    width: 30%;
-    background: var(--color-background-alt);
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-    border-radius: 0 0 0 10px;
+  .navbar {
+    flex-direction: row;
+    padding: 10px 16px;
   }
 
-  .navegacion.visible {
+  .navbar .menu {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    background: var(--color-background-alt);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    display: none;
+  }
+
+  .navbar .menu.open {
     display: flex;
   }
 
-  #cerrar {
-    font-size: 15px;
-    margin-top: 20px;
-    border: none;
-    padding: 5px;
-    color: #fff;
-    cursor: pointer;
-    background-color: rgba(2, 15, 131, 0.938);
-    transition: 1s;
-  }
-
-  .cerrar.visible {
-    display: block;
-    position: absolute;
-    top: 15px;
-    right:15px;
-  }
-
-  #cerrar:hover {
-    scale: 1.01;
-    transition: 1s;
-  }
-
-  .menu-desplegable {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: var(--color-text-alt);
-    background: none;
-    border: none;
+  .hamburger {
+    display: flex;
   }
 }

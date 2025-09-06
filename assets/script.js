@@ -10,23 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert("El nombre no puede llevar numeros");
         };
-        });
+    });
     function tieneNumeros(name) {
-    const confirmarnombre = /\d/;
-    return confirmarnombre.test(name);
-}
+        const confirmarnombre = /\d/;
+        return confirmarnombre.test(name);
+    }
 });
 
-const nav = document.querySelector("#navegacion");
-const abrir = document.querySelector("#desplegar");
-const cerrar = document.querySelector("#cerrar");
-
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-    cerrar.classList.add("visible");
-});
-
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-    cerrar.classList.remove("visible");
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger.addEventListener('click', function () {
+        menu.classList.toggle('open');
+    });
 });
