@@ -12,15 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded'), function () {
     const hamburger = document.getElementById('hamburger');
     const nav = document.getElementById('nav');
-    hamburger.addEventListener('click', function () {
+    hamburger.addEventListener('click'), function () {
         nav.classList.toggle('active');
-    });
-};
-
-document.addEventListener('DOMContentLoaded'), function () {
-    $(".bar").each(function () {
-        $(this).find(".bar-inner").animate({
-            width: $(this).attr("data-width")
-        }, 2000)
-    });
+    };
 };
